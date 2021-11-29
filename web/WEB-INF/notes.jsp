@@ -13,7 +13,7 @@
         <p>
             <a href="login">Log out</a>
         </p>
-        
+
         <p>
             <c:if test="${message eq 'create'}">Note created</c:if>
             <c:if test="${message eq 'update'}">Note updated</c:if>

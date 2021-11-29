@@ -20,6 +20,7 @@ import javax.naming.NamingException;
 
 public class GmailService {
 
+    // Use to setup template email
     public static void sendMail(String to, String subject, String template, HashMap<String, String> tags) throws Exception {
         // {{firstname}} -> Anne
         // {{date}} -> Oct. 28
@@ -46,6 +47,7 @@ public class GmailService {
         sendMail(to, subject, body, true);
     }
 
+    // Sending email
     public static void sendMail(String to, String subject, String body, boolean bodyIsHTML) throws MessagingException, NamingException {
         Context env = (Context) new InitialContext().lookup("java:comp/env");
         String username = (String) env.lookup("webmail-username");

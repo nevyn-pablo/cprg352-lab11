@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class AuthenticationFilter implements Filter {
-    
+
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
@@ -25,27 +25,27 @@ public class AuthenticationFilter implements Filter {
             HttpServletRequest httpRequest = (HttpServletRequest)request;
             HttpSession session = httpRequest.getSession();
             String email = (String)session.getAttribute("email");
-            
+
             if (email == null) {
                 HttpServletResponse httpResponse = (HttpServletResponse)response;
                 httpResponse.sendRedirect("login");
                 return;
             }
-            
+
             chain.doFilter(request, response); // execute the servlet
-            
+
             // code that is executed after the servlet
-            
-        
+
+
     }
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        
+
     }
 
     @Override
     public void destroy() {
-       
+
     }
 }

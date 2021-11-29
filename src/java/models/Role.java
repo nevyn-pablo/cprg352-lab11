@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author awarsyle
+ * @author 849961
  */
 @Entity
 @Table(name = "role")
@@ -105,5 +105,5 @@ public class Role implements Serializable {
     public String toString() {
         return "models.Role[ roleId=" + roleId + " ]";
     }
-    
+
 }

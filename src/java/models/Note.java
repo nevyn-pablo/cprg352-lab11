@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author awarsyle
+ * @author 849961
  */
 @Entity
 @Table(name = "note")
@@ -119,5 +119,5 @@ public class Note implements Serializable {
     public String toString() {
         return "models.Note[ noteId=" + noteId + " ]";
     }
-    
+
 }
